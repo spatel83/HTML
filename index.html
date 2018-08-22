@@ -1,0 +1,285 @@
+<!DOCTYPE html> 
+<html> 
+    <head>
+        <title>vmsNet Announcement</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+		
+		<style>
+
+.vmsNet_announcement {
+        background: #f8f6d2;
+        overflow: hidden;
+    display: block;
+    height: 40px;
+	position:relative;
+}
+#vmsNet_slides {
+    position: relative;
+    height: inherit;
+    padding: 0px;
+    margin: 0 0 0 40px;
+    list-style-type: none;
+    width: calc(100% - 80px);
+}
+#vmsNet_slides .slide{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+#vmsNet_slides .showing{
+    opacity: 1;
+    z-index: 2;
+}
+.controls{
+    display: none;
+}
+.vmsNet_announcement ul#vmsNet_slides li {
+    font-size: 13px;
+    padding: 8px;
+    box-sizing: border-box;
+    color: #484848; 
+		
+}
+.controls{
+        color: #ed1b2f;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        background: transparent;
+        margin: 6px 6px 0px 10px;
+}
+.controls:hover, .controls:focus{
+    background: transparent;
+        color: #ed1b2f;
+}
+#pause {
+    font-size: 14px;
+    vertical-align: top;
+    margin-top: 16px;
+    width:12px;
+}
+.announcement_buttons{
+     position: absolute;
+    left: 6px;
+    z-index: 10;
+    font-size: 0px;
+    top: 16px;
+}
+.vmsNet_announceTitle {
+        font:13px "ProximaNovaLight", Arial, Helvetica, sans-serif;
+        display:inline-block;
+        text-overflow: ellipsis;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+        vertical-align:top;
+		color: #4b6471;
+		text-decoration:none;
+}
+.vmsNet_announceDate {
+        display:inline-block;
+        vertical-align:top;
+}
+
+.vmsNet_announceContent .fa {
+        display:inline-block;
+        font-size: 8px;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+/*
+.announce_close {
+        float: right;
+    width: 3%;
+    text-align:right;
+    margin:8px 0 0 0;
+    cursor:pointer;
+}
+*/
+.vmsNet_announceContent {
+        margin: 0;
+    padding: 6px 0 8px 10px;
+    width:92%;
+    float:left;
+	text-align: center;
+}
+/*
+.vmsNet_announceRow .fa-bullhorn{
+        background:#ed1b2f;
+        padding:8px;
+        color:#FFF;
+        border-radius:100px;
+        width:auto;
+        margin:0;
+}
+*/
+
+.controls .bx-next::after {
+    content: " ";
+    height: 0;
+    width: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid #aeb9bf;
+}
+
+.controls .bx-prev::after {
+    content: " ";
+    height: 0;
+    width: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 6px solid #aeb9bf;
+}
+
+a.clear_button {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+}
+#pause{
+display:none !important;	
+}
+
+		</style>
+		
+		
+    </head> 
+    <body> 
+		<div class="vmsNet_announcement">
+						<div class="announcement_buttons">
+                            <a class="controls" id="previous"><span class="fa fa-angle-left bx-prev"></span></a>
+                          <a class="controls" id="pause" style="display:none;"><span class="fa fa-pause"></span></a>
+                            <a class="controls" id="next"><span class="fa fa-angle-right bx-next"></span></a>
+                       </div>
+					   <ul id="vmsNet_slides">
+							<li class="slide showing">
+								<div class="vmsNet_announceRow">
+									<div class="vmsNet_announceContent">
+										<a class="vmsNet_announceTitle" href="#" title="Title">
+										<span>Brief wireless disruption across several locations </span>
+										<span class="vmsNet_announceDate">on Tuesday, 5-9-17, </span>
+										<span class="vmsNet_announceDescpt" title="">during the Enterprise IT maintence window</span></a>
+									</div>									
+								</div>
+							</li>
+							<li class="slide">
+								<div class="vmsNet_announceRow">
+									<div class="vmsNet_announceContent">
+										<a class="vmsNet_announceTitle" href="#" title="Title" >
+										<span>Wireless disruption across several locations </span>
+										<span class="vmsNet_announceDate">on tuesday, 18-9-17, </span>
+										<span class="vmsNet_announceDescpt" title="">during the Enterprise IT maintence window</span></a>
+									</div>									
+								</div>
+							</li>
+							<li class="slide">
+								<div class="vmsNet_announceRow">
+									<div class="vmsNet_announceContent">
+										<a class="vmsNet_announceTitle" href="#" title="Title" >
+										<span>Brief wireless disruption across several locations </span>
+										<span class="vmsNet_announceDate">on tuesday, 21-10-17, </span>
+										<span class="vmsNet_announceDescpt" title="">during the Enterprise IT maintence window</span></a>
+									</div>									
+								</div>
+							</li>
+							<li class="slide">
+								<div class="vmsNet_announceRow">
+									<div class="vmsNet_announceContent">
+										<a class="vmsNet_announceTitle" href="#" title="Title" >
+										<span>Location wireless disruption across several locations </span>
+										<span class="vmsNet_announceDate">on tuesday, 25-9-17, </span>
+										<span class="vmsNet_announceDescpt" title="">during the Enterprise IT maintence window</span></a>
+									</div>									
+								</div>
+							</li>
+					</ul>  
+	
+			<a class="clear_button"><img src="SearchBox_Cross.gif" alt="Clear">
+			
+			</a>
+	
+	</div>
+        
+    </body>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" > </script>
+	<script>
+												var controls = document.querySelectorAll('.controls');
+                                                for(var i=0; i<controls.length; i++){
+                                                                controls[i].style.display = 'inline-block';
+                                                }
+                                               
+                                                var slides = document.querySelectorAll('#vmsNet_slides .slide');
+                                                var currentSlide = 0;
+                                                var slideInterval = setInterval(nextSlide,9000);
+                                               
+                                                function nextSlide(){
+                                                                goToSlide(currentSlide+1);
+                                                }
+                                               
+                                                function previousSlide(){
+                                                                goToSlide(currentSlide-1);
+                                                }
+                                               
+                                                function goToSlide(n){
+                                                                slides[currentSlide].className = 'slide';
+                                                                currentSlide = (n+slides.length)%slides.length;
+                                                                slides[currentSlide].className = 'slide showing';
+                                                }
+                                               
+                                               
+                                                var playing = true;
+                                                var pauseButton = document.getElementById('pause');
+                                               
+                                                function pauseSlideshow(){
+                                                                pauseButton.innerHTML = '&#9658;'; // play character
+                                                                playing = false;
+                                                                clearInterval(slideInterval);
+                                                }
+                                               
+                                                function playSlideshow(){
+                                                                pauseButton.innerHTML = '&#10074;&#10074;'; // pause character
+                                                                playing = true;
+                                                                slideInterval = setInterval(nextSlide,2000);
+                                                }
+                                               
+                                                pauseButton.onclick = function(){
+                                                                if(playing){ pauseSlideshow(); }
+                                                                else{ playSlideshow(); }
+                                                };
+                                               
+                                                var next = document.getElementById('next');
+                                                var previous = document.getElementById('previous');
+                                               
+                                                next.onclick = function(){
+                                                                pauseSlideshow();
+                                                                nextSlide();
+                                                };
+                                                previous.onclick = function(){
+                                                                pauseSlideshow();
+                                                                previousSlide();
+                                                };
+												
+												
+            
+            
+   
+
+
+	
+	</script>
+</html>
